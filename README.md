@@ -1,12 +1,59 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Paradise Nursery V2
 
-Currently, two official plugins are available:
+A React-based shopping cart application for a plant nursery. Built with Redux for state management and modular CSS for scoped styling.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- View and manage cart items
+- Quantity controls (+/-) with minimum quantity of 1
+- Delete individual items and clear the entire cart
+- Responsive layout for mobile and desktop
+- Confirmation modals for delete actions
+- Alert popup for checkout ("Coming Soon")
+- Modular CSS for scoped and maintainable styling
 
-## Expanding the ESLint configuration
+## Styling Approach
+While global CSS or styled-components could have been used, I chose `module.css` to keep styles scoped to individual components. This improves maintainability and avoids style conflicts, making the codebase easier to scale and debug.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+### Prerequisites
+- Node.js
+- npm or yarn
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/Varhgar/paradise-nursery-v2.git
+
+# Navigate into the project directory
+cd paradise-nursery-v2
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm start
+```
+
+## Folder Structure
+```
+src/
+├── components/
+│   └── Header/
+├── pages/
+│   └── CartPage/
+├── store/
+│   └── cartSlice.js
+├── App.js
+└── index.js
+```
+
+## Future Plans
+- Integrate a real checkout flow
+- Add backend API for cart persistence
+- Implement user authentication and login
+- Add product filtering and search features
+
+## License
+This project is open source and available under the MIT License.
