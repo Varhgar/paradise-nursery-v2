@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../../store/cartSlice'; // Make sure this path matches your setup
+import { addToCart } from '../../store/cartSlice'; 
 import styles from './PlantCard.module.css';
 
 const PlantCard = ({ plant }) => {
