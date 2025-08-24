@@ -8,7 +8,6 @@ A React-based shopping cart application for a plant nursery. Built with Redux fo
 - Quantity controls (+/-) with minimum quantity of 1
 - Delete individual items and clear the entire cart
 - Responsive layout for mobile and desktop
-- Confirmation modals for delete actions
 - Alert popup for checkout ("Coming Soon")
 - Modular CSS for scoped and maintainable styling
 
