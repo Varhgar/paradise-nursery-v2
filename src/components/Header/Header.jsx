@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
+import { useSelector, useDispatch } from 'react-redux';
 
 const Header = () => {
   // Temporarily remove Redux logic
-  const totalCount = 0; // Placeholder until cart is set up
+  // const totalCount = 0;
+  const cartItems = useSelector(state => state.cart.items);
+  const totalCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+
 
   return (
     <header className={styles.header}>
