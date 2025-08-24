@@ -1,7 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { removeFromCart, clearCart, addToCart } from '../../store/cartslice';
+import { removeFromCart, clearCart, addToCart, decreaseQuantity } from '../../store/cartslice';
 import Header from '../../components/Header/Header';
 import styles from './CartPage.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const CartPage = () => {
   const cartItems = useSelector(state => state.cart.items);
@@ -13,10 +14,7 @@ const CartPage = () => {
 
   const handleDecrease = (item) => {
     if (item.quantity > 1) {
-      dispatch({
-        type: 'cart/decreaseQuantity',
-        payload: { id: item.id },
-      });
+      dispatch(decreaseQuantity({ id: item.id }));
     }
   };
 
@@ -30,7 +28,8 @@ const CartPage = () => {
 
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   const totalPrice = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
-
+  const Navigate = useNavigate();
+  
   return (
     <>
       <Header />
@@ -41,7 +40,7 @@ const CartPage = () => {
           <p><strong>Total Cost:</strong> ${totalPrice.toFixed(2)}</p>
         </div>
         <div className={styles.actions}>
-          <button className={styles.continue}>Continue Shopping</button>
+          <button className={styles.continue} onClick={() => Navigate('/products')}>Continue Shopping</button>
           <button className={styles.checkout}>Checkout</button>
         </div>
         {cartItems.length === 0 ? (
