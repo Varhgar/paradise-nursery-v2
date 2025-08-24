@@ -29,7 +29,7 @@ const CartPage = () => {
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   const totalPrice = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const Navigate = useNavigate();
-  
+
   return (
     <>
       <Header />
@@ -41,7 +41,7 @@ const CartPage = () => {
         </div>
         <div className={styles.actions}>
           <button className={styles.continue} onClick={() => Navigate('/products')}>Continue Shopping</button>
-          <button className={styles.checkout}>Checkout</button>
+          <button className={styles.checkout} onClick={() => alert('Checkout coming soon!')}>Checkout</button>
         </div>
         {cartItems.length === 0 ? (
           <p>Your cart is empty.</p>
