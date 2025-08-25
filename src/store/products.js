@@ -39,7 +39,7 @@ export const productsByCategory = {
       "id": 6,
       "name": "Peace Lily",
       "price": 13.99,
-      "image": "assets/Easy-Lowlight/Peace-Lily.jpg",
+      "image": "assets/easy-lowlight/peace-lily.jpg",
       "description": "Glossy leaves, thrives in low light."
     }
   ],
