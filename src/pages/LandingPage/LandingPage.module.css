@@ -48,9 +48,8 @@
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    padding: 1rem;
-    /* height: auto; */
-    /* min-height: auto; */
+    padding: 2rem;
+    justify-content: space-around;
   }
 
   .left, .right {
