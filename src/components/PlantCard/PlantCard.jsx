@@ -15,7 +15,7 @@ const PlantCard = ({ plant }) => {
 
   return (
     <div className={styles.card}>
-      <img src={plant.image} alt={plant.name} className={styles.image} />
+      <img src={`${import.meta.env.BASE_URL}${plant.image}`} alt={plant.name} className={styles.image} />
       <div className={styles.info}>
         <h3 className={styles.name}>{plant.name}</h3>
         <p className={styles.description}>{plant.description}</p>
